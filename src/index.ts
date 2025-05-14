@@ -3,8 +3,8 @@ import { GitHubIssueAssignerAgent } from './agent';
 // Export the agent for Cloudflare Workers
 export default {
   async fetch(request, env, ctx) {
-    // Create a new response object
-    return new Response("GitHub Issue Assigner Agent is running. Please use the API endpoints to interact with it.");
+    // For main fetch handler on the worker
+    return new Response("GitHub Issue Assigner Agent is running. Access the agent through its specific endpoints.");
   }
 };
 
