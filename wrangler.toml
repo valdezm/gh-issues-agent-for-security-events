@@ -1,11 +1,26 @@
 name = "gb-issue-assigner-agent"
 main = "src/index.ts"
 compatibility_date = "2023-05-15"
+compatibility_flags = ["nodejs_compat"]
 
-# KV Namespace for storing stats and metadata
-kv_namespaces = [
-  { binding = "ISSUE_STATS", id = "demo", preview_id = "demo" }
-]
+# KV Namespace for storing stats and metadata (if needed)
+# kv_namespaces = [
+#   { binding = "ISSUE_STATS", id = "demo", preview_id = "demo" }
+# ]
+
+# Durable Object for the AI Agent
+[[durable_objects.bindings]]
+binding = "GitHubIssueAssignerAgent"
+class_name = "GitHubIssueAssignerAgent"
+
+# Required for Durable Objects to store state
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GitHubIssueAssignerAgent"]
+
+# AI bindings
+[ai]
+binding = "AI"
 
 # Environment variables - replace with actual values in production
 [vars]

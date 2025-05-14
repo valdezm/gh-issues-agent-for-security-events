@@ -13,7 +13,11 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.13",
     "@octokit/rest": "^19.0.13",
-    "hono": "^3.3.0"
+    "agents": "^0.1.0",
+    "ai": "^3.0.0",
+    "hono": "^3.3.0",
+    "zod": "^3.22.4"
   }
 }
