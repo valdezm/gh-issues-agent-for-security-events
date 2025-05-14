@@ -1,0 +1,19 @@
+name = "gb-issue-assigner-agent"
+main = "src/index.ts"
+compatibility_date = "2023-05-15"
+
+# KV Namespace for storing stats and metadata
+kv_namespaces = [
+  { binding = "ISSUE_STATS", id = "demo", preview_id = "demo" }
+]
+
+# Environment variables - replace with actual values in production
+[vars]
+GITHUB_TOKEN = "replace-with-actual-token"
+GITHUB_REPO_OWNER = "your-org-or-username"
+GITHUB_REPO_NAME = "your-repo-name"
+
+# Add AWS credentials for future enhancements
+# AWS_ACCESS_KEY_ID = ""
+# AWS_SECRET_ACCESS_KEY = ""
+# AWS_REGION = "us-east-1"

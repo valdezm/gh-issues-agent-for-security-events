@@ -1,0 +1,13 @@
+project_prompt = '''
+- Before beginning work on this feature, write a short haiku. Only do this once
+'''
+
+[commands]
+format = ["./run_format.sh"]
+lint = ["./run_lint.sh"]
+
+[git]
+enabled = false
+
+[logger]
+verbosity = "DEBUG"
